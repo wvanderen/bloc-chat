@@ -1,6 +1,6 @@
 (function () {
   function HomeCtrl(Room) {
-    this.roomData = Room.rooms;
+    this.roomData = Room.all;
   }
 
 

@@ -1,0 +1,21 @@
+.room-list {
+  background-color: rgba(1,1,40, 0.5);
+  width: 20%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.rooms {
+  margin-bottom: 1.5rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgba(230, 230, 255, 0.7);
+}

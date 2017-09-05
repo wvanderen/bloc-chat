@@ -1,6 +1,6 @@
-<section class='room-list container clearfix'>
-  <div class='room-list column fourth' ng-repeat='room in home.roomData'>
-    <h1>TEST</h1>
-    <h2>{{ home.room }}</h2>
+<section class='room-list container clearfix column fourth'>
+  <h2>Bloc Chat</h2>
+  <div class='rooms' ng-repeat='room in home.roomData track by $index'>
+    <a  href="#" class='room-link'>{{ home.roomData[$index].$value }}</a>
   </div>
 </section>
