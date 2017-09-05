@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="blocChat">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Bloc Chat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,800,600,700,300">
+      <link rel="stylesheet" type="text/css" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+      <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+      <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <ui-view></ui-view>
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBIgvcnh212Vb3L2vUNaCwcI1kVFOzqu0o",
+        authDomain: "bloc-chat-fb720.firebaseapp.com",
+        databaseURL: "https://bloc-chat-fb720.firebaseio.com",
+        projectId: "bloc-chat-fb720",
+        storageBucket: "bloc-chat-fb720.appspot.com",
+        messagingSenderId: "822305343055"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/services/Room.js"></script>
+    <script src="/scripts/controllers/HomeCtrl.js"></script>
+</body>
+</html>
