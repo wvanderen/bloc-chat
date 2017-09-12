@@ -7,9 +7,9 @@
 
     Room.all = rooms;
     //Add new room when going through modal
-    Room.add = function(room) {
+    Room.add = function(roomName) {
 
-      rooms.$add(room);
+      rooms.$add(roomName);
     };
 
     return Room;

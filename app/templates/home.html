@@ -3,6 +3,6 @@
   <div ng-controller='ModalCtrl as modal'>
     <button type="button" class="room" ng-click='modal.open()'>Add room</button>
   <div class='rooms clearfix' ng-repeat='room in home.roomData track by $index'>
-    <a  href="#" class='room-link'>{{ home.roomData[$index].$value }}</a>
+    <a  href="#" class='room-link'>{{ room.$value }}</a>
   </div>
 </section>

@@ -3,22 +3,23 @@
     //Initializing modal
 
     this.open = function () {
-      var modalInstance = $uibModal.open({
+      ModalCtrl.modalInstance = $uibModal.open({
         ariaLabelledBy: 'modal-title',
         ariaDescribedBy: 'modal-body',
         templateUrl: '/templates/modal.html',
         controller: 'ModalCtrl as modal',
       })
-    return modalInstance;
   };
 
     //modal submit
     this.submit = function() {
-      Room.add();
+      Room.add(this.roomName);
+      this.roomName = null;
+      ModalCtrl.modalInstance.close();
     };
 
-    this.close = function(reason) {
-      $uibModalInstance.dismiss(reason);
+    this.close = function() {
+      ModalCtrl.modalInstance.dismiss();
     };
 
   };
