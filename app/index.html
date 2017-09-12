@@ -9,6 +9,7 @@
       <link rel="stylesheet" type="text/css" href="styles/normalize.css">
       <link rel="stylesheet" type="text/css" href="/styles/main.css">
       <link rel="stylesheet" type="text/css" href="/styles/roomlist.css">
+      <link rel="stylesheet" type="text/css" href='/styles/modal.css'>
 </head>
 <body>
     <ui-view></ui-view>
@@ -30,8 +31,11 @@
       };
       firebase.initializeApp(config);
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
     <script src="/scripts/app.js"></script>
     <script src="/scripts/services/Room.js"></script>
+    <script src="/scripts/services/CreateRoom.js"></script>
     <script src="/scripts/controllers/HomeCtrl.js"></script>
+    <script src="/scripts/controllers/ModalCtrl.js"></script>
 </body>
 </html>

@@ -5,10 +5,12 @@
   position: fixed;
   left: 0;
   top: 0;
+  display: inline-block;
 }
 
 .rooms {
   margin-bottom: 1.5rem;
+  clear: both;
 }
 
 a {
@@ -18,4 +20,13 @@ a {
 
 a:hover {
   color: rgba(230, 230, 255, 0.7);
+}
+
+.bloc-chat-header {
+  float: left;
+}
+
+.room {
+  margin: 1.25em 0;
+  float: right;
 }

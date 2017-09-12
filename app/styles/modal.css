@@ -1,0 +1,42 @@
+.modal {
+  position: absolute;
+  display: block;
+  left: 300px;
+  top: 100px;
+  border: 1px solid black;
+  padding: 5px;
+  background-color: rgba(1,1,40, 0.5);
+  text-align: center;
+
+}
+
+
+.input {
+  width: inherit;
+}
+
+.modal-subheader {
+  color: black;
+  font-size: 14px;
+  text-align: center;
+}
+
+.input {
+  margin-bottom: 1rem;
+}
+
+.button {
+  background-color: white;
+  position: relative;
+  display: inline-block;
+  width: 49%;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: roboto;
+
+
+
+}
