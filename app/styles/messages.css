@@ -1,0 +1,13 @@
+
+.sender-name {
+  position: relative;
+  display: inline;
+  float: left;
+}
+
+.message-content {
+  border: 1px solid black;
+  border-radius: 15px 15px 0px 15px;
+  background-color: rgba(0, 0, 255, 0.4);
+  right: 20px;
+}

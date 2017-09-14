@@ -1,8 +1,15 @@
+
 <section class='room-list container clearfix column fourth'>
   <h2 class="bloc-chat-header">Bloc Chat</h2>
   <div ng-controller='ModalCtrl as modal'>
     <button type="button" class="room" ng-click='modal.open()'>Add room</button>
   <div class='rooms clearfix' ng-repeat='room in home.roomData track by $index'>
-    <a  href="#" class='room-link'>{{ room.$value }}</a>
+    <a  href="#" class='room-link' ng-click="home.clickHandler(room)">{{ room.$value }}</a>
   </div>
 </section>
+<main class='room-body container clearfix column flow-opposite' ng-repeat="messages in home.activeMessages">
+  <h2 class='room-header'>{{ home.activeRoom.$value }}</h2>
+  <div class="messages">
+    <h3 class="sender-name">Sender Name</h3>
+      <p class="message-content">Message Body</p>
+</main>
