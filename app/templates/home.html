@@ -3,13 +3,24 @@
   <h2 class="bloc-chat-header">Bloc Chat</h2>
   <div ng-controller='ModalCtrl as modal'>
     <button type="button" class="room" ng-click='modal.open()'>Add room</button>
+  </div>
   <div class='rooms clearfix' ng-repeat='room in home.roomData track by $index'>
     <a  href="#" class='room-link' ng-click="home.clickHandler(room)">{{ room.$value }}</a>
   </div>
 </section>
-<main class='room-body container clearfix column flow-opposite' ng-repeat="messages in home.activeMessages">
-  <h2 class='room-header'>{{ home.activeRoom.$value }}</h2>
-  <div class="messages">
-    <h3 class="sender-name">Sender Name</h3>
-      <p class="message-content">Message Body</p>
+
+<main class="module column flow-opposite">
+  <header class='top-bar'>
+    <h2 class='room room-header'>{{ home.activeRoom.$value }}</h2>
+  </header>
+  <br>
+  <ol class='conversation' ng-repeat="message in home.activeMessages">
+    <li class='line'>
+      <h3 class="sender">{{ message.username }}</h3>
+      <div class="message">
+        <p class="content">{{ message.content }}</p>
+        <p class='time'>{{ message.sentAt }}</p>
+      </div>
+    </li>
+  </ol>
 </main>

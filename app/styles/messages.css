@@ -1,13 +1,54 @@
-
-.sender-name {
-  position: relative;
-  display: inline;
-  float: left;
+ol {
+  list-style-type: none;
 }
 
-.message-content {
-  border: 1px solid black;
-  border-radius: 15px 15px 0px 15px;
-  background-color: rgba(0, 0, 255, 0.4);
-  right: 20px;
+.sender {
+  width: 40px;
+}
+
+.chat {
+    list-style: none;
+    background: none;
+    margin: 0;
+    padding: 0 0 50px 0;
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+.line {
+    padding: 2rem;
+    overflow: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: flex-start | stretch;
+}
+
+.sender {
+  right: 0px;
+  order: 1;
+  flex-grow: 1;
+}
+
+.message {
+    order: 2;
+    margin: auto;
+    flex-grow: 1;
+    border: black solid 1px;
+    border-radius: 5px;
+}
+
+.message p {
+    font-size: 0.8rem;
+    margin: 0 0 0.2rem 0;
+    color: #666;
+    text-align: left;
+}
+
+.message .time {
+  color: #999;
+  text-align: right;
+}
+
+
+
+
 }

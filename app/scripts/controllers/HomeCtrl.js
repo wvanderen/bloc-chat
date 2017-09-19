@@ -3,14 +3,15 @@
     //Makes room data available in home template
     this.roomData = Room.all;
     //object in which active room is stored.
-    this.activeRoom = null;
+    this.activeRoom;
 
     this.activeMessages;
 
-    this.clickHandler = function (room) {
-    Message.getByRoomID(activeRoom);
-    this.activeRoom = room;
-    console.log(room); //room.$id
+    this.clickHandler = function(room) {
+      this.activeRoom = room;
+      this.activeMessages = Message.getByRoomID(room.$id);
+      console.log(this.activeRoom); //room.$id
+      console.log(this.activeMessages);
   };
 };
 
