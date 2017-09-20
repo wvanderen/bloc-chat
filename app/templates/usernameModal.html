@@ -1,0 +1,8 @@
+<div ng-controller='UsernameModalCtrl as modal' class="modal">
+  <h2 class="modal-header">Set a username</h2>
+    <h4 class='modal-subheader'>This name will appear when your send messages</h4>
+    <form>
+      <input type='text' name='username' class="input" ng-model="modal.username"><br>
+      <input class="button" type="submit" ng-click='modal.save()'>
+    </form>
+</div>
