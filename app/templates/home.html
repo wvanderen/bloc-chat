@@ -19,8 +19,12 @@
       <h3 class="sender">{{ message.username }}</h3>
       <div class="message">
         <p class="content">{{ message.content }}</p>
-        <p class='time'>{{ message.sentAt }}</p>
+        <p class='time'>{{ message.sentAt | date: "short" }}</p>
       </div>
     </li>
   </ol>
 </main>
+<footer class="chatbar">
+  <input type="text" class="chattext" ng-model="home.content">
+  <button type="submit" class="chatsubmit" ng-click="home.messageSubmit()">Send</button>
+</footer>

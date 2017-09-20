@@ -7,12 +7,20 @@
 
     this.activeMessages;
 
+    this.content;
+
     this.clickHandler = function(room) {
       this.activeRoom = room;
       this.activeMessages = Message.getByRoomID(room.$id);
       console.log(this.activeRoom); //room.$id
       console.log(this.activeMessages);
-  };
+    };
+
+
+    this.messageSubmit = function() {
+      Message.send(this.content, this.activeRoom);
+      this.content = null;
+    }
 };
 
 
