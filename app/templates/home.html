@@ -9,12 +9,12 @@
   </div>
 </section>
 
-<main class="module column flow-opposite">
+<div class="module column flow-opposite" scroll-glue>
   <header class='top-bar'>
     <h2 class='room room-header'>{{ home.activeRoom.$value }}</h2>
   </header>
   <br>
-  <ol class='conversation' ng-repeat="message in home.activeMessages">
+  <ol  class='conversation' ng-repeat="message in home.activeMessages">
     <li class='line'>
       <h3 class="sender">{{ message.username }}</h3>
       <div class="message">
@@ -23,7 +23,7 @@
       </div>
     </li>
   </ol>
-</main>
+</div>
 <form class="chatbar">
   <input type="text" class="chattext" ng-model="home.content">
   <button type="submit" class="chatsubmit" ng-click="home.messageSubmit()">Send</button>
